@@ -9,6 +9,9 @@ for i in question_data:
     new_q = Question(q_text, q_answer)
     q_bank.append(new_q)
 
-quiz = QuizBrain(q_bank)
-while quiz.still_have_questions() is not False:
-    quiz.next_question()
+q = QuizBrain(q_bank)
+while q.still_have_questions() is not False:
+    q.next_question()
+
+print("You've completed the quiz.")
+print(f"Your final score was: {q.score}/{q.q_number}")
